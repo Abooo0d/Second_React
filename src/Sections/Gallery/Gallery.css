@@ -1,0 +1,112 @@
+.gallery{
+  min-height:100vh;
+  background-color:var(--section-color);
+  position:relative;
+}
+.gallery .container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  gap: 20px;
+}
+.gallery .container h1{
+  text-align:center;
+  font-size:52px;
+  margin:0;
+  color:var(--main-color);
+}
+.gallery .container p{
+  text-align:center;
+  color:var(--gray);
+  margin:0;
+}
+.gallery .container .gallery-con{
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:20px;
+}
+.gallery .container .gallery-con .gallery-item{
+  position:relative;
+  border-radius: 6px;
+  overflow:hidden;
+  height:300px;
+  background-size: cover;
+  background-position: center;
+}
+.gallery .container .gallery-con .gallery-item.one{
+  flex: 1 1;
+  min-width: 300px;
+}
+.gallery .container .gallery-con .gallery-item.tow{
+  flex: 2 1;
+  min-width: 550px;
+}
+.gallery .container .gallery-con .gallery-item img{
+  width:100%;
+  height:100%;
+  background-size:cover;
+}
+.gallery .container .gallery-con .gallery-item .gallery-item-overlay{
+  position: absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background-color:var(--main-color);
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  color:white;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.gallery .container .gallery-con .gallery-item .gallery-item-overlay svg{
+  font-size:40px;
+}
+.gallery .container .gallery-con .gallery-item:hover .gallery-item-overlay{
+  opacity: 0.7;
+}
+.gallery .popup-image{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--main-dark-color);
+  display:none;
+  z-index: 10;
+}
+.gallery .popup-image.activated{
+  display:block;
+}
+.gallery .popup-image img{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%) scale(0.2);
+  border-radius: 6px;
+  border:1px solid white;
+  height: calc(100vh - 20%);
+}
+.gallery .popup-image .popup-exit{
+  position: absolute;
+  top: 100px;
+  right: 80px;
+  background-color: white;
+  color: var(--main-color);
+  border: none;
+  border-radius: 50%;
+  font-weight: bold;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  cursor:pointer;
+}

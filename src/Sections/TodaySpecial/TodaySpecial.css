@@ -1,0 +1,115 @@
+.today-special{
+  min-height:100vh;
+  position: relative;
+  text-align:center;
+}
+.today-special .image{
+  background-image:url("../../images/special_menu_bg.jpg");
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100vh;
+  background-size: cover;
+  z-index: -1;
+}
+.today-special .image.removed{
+  display: none;
+}
+.today-special .overlay{
+  z-index: 10;
+  min-height: 100vh;
+  background-color: rgb(0 0 0 / 50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.today-special .overlay .container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 60px;
+} 
+.today-special .overlay .container h2{
+  color: var(--main-color);
+  font-size: 52px;
+  margin: 0;
+}
+.today-special .overlay .container p{
+  color: white;
+  font-size: 20px;
+}
+.today-special .container .today-con{
+  min-height: 400px;
+  min-width: 817px;
+  position: relative;
+  overflow: hidden;
+  margin-top: 35px;
+}
+.today-special .today-con .special-con{
+  transition: 0.3s;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  min-width: 1800px;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: -73px;
+}
+.today-special .special-con .today-box{
+  width: 255px;
+  height: 320px;
+  border-radius: 6px;
+  border: 2px solid White;
+  cursor: pointer;
+  transition: 0.3s;
+  position: relative;
+}
+.today-special .today-box img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+.today-special .today-box .box-overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--main-color);
+  opacity: 0;
+  z-index: 0;
+  transition:0.3s;
+}
+.today-special .today-box .info{
+  position: absolute;
+  bottom: 18px;
+  left: 50%;
+  transform: translateX(-50%) scale(0.5);
+  color: white;
+  border: 3px solid white;
+  transition: 0.3s;
+  opacity: 0;
+  z-index: 1;
+  
+}
+.today-special .special-con .today-box:hover .box-overlay{
+  opacity: 0.5;
+}
+.today-special .special-con .today-box:hover .info{
+  opacity: 1;
+  transform: translateX(-50%) scale(1);
+}
+.today-special .today-box .info h3{
+
+}
+.today-special .today-box .info p{
+
+}

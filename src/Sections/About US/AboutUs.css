@@ -1,0 +1,48 @@
+.about-us{
+  background-color:var(--section-color);
+  min-height:100vh;
+}
+.about-us .container{
+  display: flex;
+  justify-content:center;
+  align-items:center;
+  gap:20px;
+}
+.about-us .info{
+  flex:1;
+}
+.about-us .info h2{
+  color: var(--main-color);
+  transition: 0.3s;
+  font-size: 52px;
+  font-weight: bold;
+}
+.about-us .info  p{
+  color: #686868;
+  font-size: 14px;
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.80857
+}
+.about-us .images{
+  flex:1;
+  padding-top: 40px;
+  position: relative;
+  text-align: center;
+}
+.about-us .images .main{
+  background-image:url("../../images/about-main.jpg");
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  border: 7px solid white;
+}
+.about-us .images .second{
+  background-image:url("../../images/about-inset.jpg");
+  border-radius: 50%;
+  border: 7px solid white;
+  height: 150px;
+  width: 150px;
+  position: absolute;
+  top: 0px;
+  right: 20px;
+}

@@ -1,0 +1,123 @@
+.pricing{
+  min-height:100vh;
+  background-color:var(--section-color);
+}
+.pricing .container{
+  min-height:100vh;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  flex-direction:column;
+  gap:20px;
+  padding-top:30px;
+  padding-bottom:30px;
+}
+.pricing .container h1{
+  font-size:52px;
+  color:var(--main-color);
+  margin:0;
+}
+.pricing .container p{
+  color:var(--gray);
+  margin:0;
+  text-align:center;
+  margin-bottom:10px;
+}
+.pricing .container .pricing-con{
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  gap:20px;
+}
+.pricing .container .pricing-con .pricing-plan{
+  min-height:450px;
+  border-radius: 6px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  flex-direction: column;
+  border:1px solid var(--main-color);
+  min-width: 300px;
+  background-color:#f0f0f0;
+  box-shadow: 10px 10px 15px rgb(0 0 0 / 20%);
+  transition: 0.3s;
+}
+.pricing .container .pricing-con .pricing-plan .type{
+  background-color: var(--main-color);
+  padding: 15px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  transition: 0.3s;
+  width: 100%;
+}
+.pricing .container .pricing-con .pricing-plan .type img{
+  width:50px;
+  height:50px;
+}
+.pricing .container .pricing-con .pricing-plan .type h3{
+  color: white;
+  margin: 0;
+  font-size: 25px;
+}
+.pricing .container .pricing-con .pricing-plan .plan-price{
+  background-color:#f0f0f0;
+  font-size: 50px;
+  padding:20px;
+  transition: 0.3s;
+  width:100%;
+  text-align:center;
+  font-family: 'Roboto Flex', sans-serif;
+}
+.pricing .container .pricing-con .pricing-plan .plan-price span{
+  color:var(--main-color);
+  transition: 0.3s;
+}
+.pricing .container .pricing-con .pricing-plan .features{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  border-top: 1px solid #f0f0f0;
+  border-bottom: 1px solid #f0f0f0;
+}
+.pricing .container .pricing-con .pricing-plan .features li{
+  background-color: white;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 15px;
+  color: #5f5f5f;
+  font-size: 18px;
+  text-align: center;
+  font-family: 'Roboto Flex', sans-serif;
+}
+.pricing .container .pricing-con .pricing-plan .features li:not(:last-child){
+  border-bottom: 1px solid #f0f0f0;
+}
+.pricing .container .pricing-con .pricing-plan .buy{
+  height: 50px;
+  padding: 10px;
+  margin: 10px auto;
+  border: 2px solid var(--main-color);
+  transition: 0.3s;
+  border-radius: 6px;
+  color: white;
+  width: calc(100% - 32px);
+  background-color: var(--main-color);
+  font-size: 20px;
+}
+.pricing .container .pricing-con .pricing-plan:hover{
+  transform:translateY(-10px);
+}
+.pricing .container .pricing-con .pricing-plan:hover .buy{
+
+  background-color: white;
+  color: var(--main-color);
+}
