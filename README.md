@@ -1,5 +1,5 @@
 # Second_React
-Second React App Made With Vite 
+Second React App 
 ## How To Run 
 First You Have To Create React App With `npm create-react-app`
 Then Delete All Files Except The `node_modules`
