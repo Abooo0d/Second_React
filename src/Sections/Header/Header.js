@@ -1,17 +1,17 @@
 import "./Header.css";
-import {useRef,useEffect} from "react";
+import { useRef, useEffect } from "react";
 import Container from "../Container/Container";
 import NavItem from "./Components/Nav-Item/NavItem";
 import { FaAnglesUp } from "react-icons/fa6";
 let headerRef;
 let goTopRef;
 const ShowGoTop = () => {
-  if(window.scrollY > window.innerHeight){
+  if (window.scrollY > window.innerHeight) {
     goTopRef.current.classList.add("show-top");
-  }else{
+  } else {
     goTopRef.current.classList.remove("show-top");
   }
-}
+};
 // const StickDown = () => {
 //   let topInterval;
 //   let topCounter = 0;
@@ -34,10 +34,10 @@ const ShowGoTop = () => {
 //     }
 //   }
 // }
-const Header = () =>  {
-  const goTop = () =>{
-    window.scrollTo({ top:0, left:0, behavior : "smooth"});
-  } ;
+const Header = () => {
+  const goTop = () => {
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  };
   headerRef = useRef();
   goTopRef = useRef();
   const buttonRef = useRef();
@@ -50,16 +50,15 @@ const Header = () =>  {
   //   clearInterval(setEvent);
   // }, 100);
   useEffect(() => {
-    buttonRef.current.addEventListener("click",() => {
+    buttonRef.current.addEventListener("click", () => {
       listRef.current.classList.toggle("show");
       buttonRef.current.classList.toggle("show");
     });
   });
-  return(
+  return (
     <header ref={headerRef} className="top">
       <Container>
-        <a className="logo" href="#a">
-        </a>
+        <a className="logo" href="#a"></a>
         <button className="menu-toggler" ref={buttonRef}>
           <span></span>
           <span></span>
@@ -67,16 +66,18 @@ const Header = () =>  {
         </button>
         <div className="linkes" ref={listRef}>
           <ul>
-            <NavItem link="Home"  cls="active"/>
+            <NavItem link="Home" cls="active" />
             <NavItem link="About" />
             <NavItem link="Contact Us" />
             <NavItem link="portFolio" />
           </ul>
         </div>
       </Container>
-      <button className="go-top" ref={goTopRef} onClick={goTop}><FaAnglesUp/></button>
+      <button className="go-top" ref={goTopRef} onClick={goTop}>
+        <FaAnglesUp />
+      </button>
     </header>
   );
 };
 export default Header;
-export {ShowGoTop};
+export { ShowGoTop };
